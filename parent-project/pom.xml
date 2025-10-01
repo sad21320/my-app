@@ -67,6 +67,11 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.0</version>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>3.1.1</version>
+      </plugin>
     </plugins>
   </build>
 
@@ -76,11 +81,22 @@
       <activation>
         <activeByDefault>true</activeByDefault>
       </activation>
-      <!-- Нет специальных действий для dev -->
     </profile>
     <profile>
       <id>prod</id>
-      <!-- Пустой профиль, плагин будет в cli-module -->
     </profile>
   </profiles>
+
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub Packages</name>
+      <url>https://maven.pkg.github.com/sad21320/my-app</url>
+    </repository>
+    <snapshotRepository>
+      <id>github</id>
+      <name>GitHub Packages</name>
+      <url>https://maven.pkg.github.com/sad21320/my-app</url>
+    </snapshotRepository>
+  </distributionManagement>
 </project>
