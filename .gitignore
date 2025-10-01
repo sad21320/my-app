@@ -1,22 +1,5 @@
-# Временные файлы
-*.tmp
-
-# Лог-файлы
-*.log
-
-# Папка IDE
+target/
 .idea/
-
-# Системные файлы Windows
-Thumbs.db
-desktop.ini
-$RECYCLE.BIN/
-
-# Папки сборки
-build/
-dist/
-
-# Исполняемые файлы
-*.exe
-*.dll
-*.pdb 
+*.iml
+.m2/
+*.class
