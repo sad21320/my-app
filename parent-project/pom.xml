@@ -69,4 +69,18 @@
       </plugin>
     </plugins>
   </build>
+
+  <profiles>
+    <profile>
+      <id>dev</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <!-- Нет специальных действий для dev -->
+    </profile>
+    <profile>
+      <id>prod</id>
+      <!-- Пустой профиль, плагин будет в cli-module -->
+    </profile>
+  </profiles>
 </project>
